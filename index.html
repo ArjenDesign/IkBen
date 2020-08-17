@@ -10,6 +10,7 @@
             function WriteCookie() {
 			   Answer1Result = escape(document.quiz.hats.value) + ";"; 
                document.cookie = "1=" + Answer1Result + "path=/";
+				 alert(document.cookie);
 			   document.forms["quiz"].submit();
             }
 			 
