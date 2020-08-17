@@ -37,13 +37,38 @@
 					QuestionCounter+=1;
 				    Question = cookiearray[i].split('=')[0];
 				    Answer = cookiearray[i].split('=')[1];
-					var QuestionB = Question;
-					var AnswerB = Answer;
+					var QuestionB = parseInt(Question);	
+					var AnswerB = parseInt(Answer);	
 					
+					if(QuestionB==1){
+					Question1Answer=AnswerB;
+						
+						if(AnswerB==1){
+							Question1Text="Creatief";
+						}
+
+						if(AnswerB==2){
+							Question1Text="Beschouwend";
+						}
+						
+						if(AnswerB==3){
+							Question1Text="Positief";
+						}
+						
+						if(AnswerB==4){
+							Question1Text="Op gevoel";
+						}
+						
+						if(AnswerB==5){
+							Question1Text="Feitelijk";
+						}
+						
+						if(AnswerB==6){
+							Question1Text="Negatief";
+						}
 					
-					Question1Answer=AnswerB;						
-					Question1Text=Question1Answer;
-				
+						
+					}
 					
 					if(QuestionB==2){
 					Question2Answer=AnswerB;
