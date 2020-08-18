@@ -13,17 +13,17 @@
                document.cookie = "1=" + Answer1Result + "path=/";
 			   
 				
-				for (var i = 0; i < form.elements.length; i++ ) 
+				for (var i = 0; i < document.forms.elements.length; i++ ) 
 				{
-					if (form.elements[i].type == 'checkbox')
+					if (document.forms.elements[i].type == 'checkbox')
 					{
-						if (form.elements[i].checked == true)
+						if (document.forms.elements[i].checked == true)
 						{
 							alert(i);
 						}
 					}
 					
-					if(i==form.elements.length){
+					if(i==document.forms.elements.length){
 						document.forms["quiz"].submit();
 					}
 				}		
