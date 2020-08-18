@@ -8,10 +8,22 @@
 		 <script type = "text/javascript">
         
             function WriteCookie() {
+				
 			   Answer1Result = escape(document.quiz.hats.value) + ";"; 
                document.cookie = "1=" + Answer1Result + "path=/";
-				 alert(document.cookie);
 			   document.forms["quiz"].submit();
+				
+				for (var i = 0; i < form.elements.length; i++ ) 
+				{
+					if (form.elements[i].type == 'checkbox')
+					{
+						if (form.elements[i].checked == true)
+						{
+							alert(i);
+						}
+					}
+				}		
+				
             }
 			 
 			 function ShowCookie() {
@@ -24,50 +36,57 @@
 
 <body>
 <h1>Hoe stel je je vaak op in discussies?</h1>
+	<h2>Je mag er twee kiezen.</h2>
 	
 <form action="q2.html" name = "quiz">
 	
-<table style="width: 300px;">
+<table style="width: 250px;">
 	<tbody>
 		<tr>
 			<td><label>
   <input type="checkbox" name="hats" value="1" class="check" checked>
-  <img src="images/__green.png" width="300" height="225">
+  <img src="images/__green.png" width="250" height="175">
 				<h1>Creatief</h1>
 </label></td>
 			<td><label>
   <input type="checkbox" name="hats" value="2" class="check" checked>
-  <img src="images/__blue.png" width="300" height="225">
+  <img src="images/__blue.png" width="250" height="175">
 				<h1>Beschouwend</h1>
 </label></td>
 			<td><label>
   <input type="checkbox" name="hats" value="4" class="check" checked>
-  <img src="images/__yellow.png" width="300" height="225">
+  <img src="images/__yellow.png" width="250" height="175">
 				<h1>Positief</h1>
 </label></td>
+			<td><label>
+				<img src="images/__head.png" width="250" height="400" alt=""/>
+				</label></td>
+			
 		</tr>
 		<tr>
 			<td><label>
   <input type="checkbox" name="hats" value="8" class="check" checked>
-  <img src="images/__red.png" width="300" height="225">
+  <img src="images/__red.png" width="250" height="175">
   <h1>Op gevoel</h1>
 </label>
 </td>
 			<td><label>
   <input type="checkbox" name="hats" value="16" class="check" checked>
-  <img src="images/__white.png" width="300" height="225">
+  <img src="images/__white.png" width="250" height="175">
 				<h1>Feitelijk</h1>
 </label></td>
 			<td><label>
   <input type="checkbox" name="hats" value="32" class="check" checked>
-  <img src="images/__black.png" width="300" height="225">
+  <img src="images/__black.png" width="250" height="175">
 				<h1>Negatief</h1>
 </label></td>
+		<td><label>
+				<img src="images/__body.png" width="250" height="300" alt=""/>
+				</label></td>
 		</tr>
 	</tbody>
 </table>
-	
-	<script type = "text/javascript">
+<script type = "text/javascript">
 	
 	var checkboxes = document.getElementsByTagName('input');
 
@@ -90,6 +109,8 @@
 
 		
 	</script>
+	
+	
 
 	
 <div>
